@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:iac_task/core/utils/app_colors.dart';
+
+class AppTheme {
+  static ThemeData lightTheme() {
+    return ThemeData.light(useMaterial3: true).copyWith(
+      scaffoldBackgroundColor: AppColors.scaffoldWhiteColor,
+      primaryColor: AppColors.primaryColor,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.primaryColor,
+        foregroundColor: Colors.white,
+      ),
+      textTheme: const TextTheme(
+        headlineMedium: TextStyle(
+          color: AppColors.primaryColor,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.primaryColor,
+        ),
+      ),
+    );
+  }

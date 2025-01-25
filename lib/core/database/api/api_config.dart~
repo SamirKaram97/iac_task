@@ -1,0 +1,5 @@
+abstract class APIConfig {
+  static const String baseApiUrl="https://samirkaram97.wiremockapi.cloud";
+  static const String loginEndPoint="$baseApiUrl/user/login";
+  static const String registerEndPoint="$baseApiUrl/user/register";
+}

@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iac_task/core/utils/app_strings.dart';
+import 'package:iac_task/core/utils/app_styles.dart';
+import 'package:iac_task/features/auth/presentation/screens/register/register_input_data_section.dart';
+import 'package:iac_task/features/auth/presentation/screens/widgets/custom_text_from_filed.dart';
+
+class RegisterBody extends StatelessWidget {
+  const RegisterBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 50.w, vertical: 50.h),
+      child: const Column(
+        children: [
+          RegisterInputDataSection(),
+          TermsSection()
+        ],
+      ),
+    );
+  }
+}
+
+class TermsSection extends StatelessWidget {
+  const TermsSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(AppStrings.byContinue,style: AppStyles.light20TextStyle,),
+        RichText(
+            text: TextSpan(
+              text: AppStrings.termsOfUse,
+              style: AppStyles.bold20TextStyle,
+              children: [
+                TextSpan(
+                  text: AppStrings.and,
+                  style:  AppStyles.regular20TextStyle20TextStyle,),
+                TextSpan(
+                  text: AppStrings.privacyPolicy,
+                  style:  AppStyles.bold20TextStyle,),
+              ],
+            ))
+      ],
+    );
+  }
+}
+
+
