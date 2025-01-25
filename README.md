@@ -45,6 +45,38 @@ This is a simple Flutter project designed to implement basic login and registrat
 Clean code with modular architecture.
 
 Reusable components for UI and logic.
+
+## Architecture
+The project follows the Clean Architecture pattern to ensure maintainability and scalability. It is divided into three primary layers:
+
+Presentation Layer:
+
+- Handles the UI and user interactions.
+
+- Contains Flutter widgets and BLoC for state management.
+
+- Includes localization support and reusable UI components.
+
+Domain Layer:
+
+- Contains core business logic, use cases, and interfaces.
+
+- Ensures the separation of business rules from implementation details.
+
+Data Layer:
+
+- Manages data sources such as APIs and local storage.
+
+- Utilizes Dio for network requests and repositories for data handling.
+
+Benefits of Clean Architecture:
+
+- Separation of Concerns: Each layer has a distinct responsibility.
+
+- Testability: Easy to write unit tests for individual components.
+
+- Scalability: Simplifies the addition of new features.
+
 ## Video
 https://drive.google.com/file/d/1RJCy4vnNWbR6Q6gSqdF-iNtofUR3MJS7/view?usp=sharing
 
